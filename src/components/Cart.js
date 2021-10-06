@@ -30,10 +30,10 @@ export default class Cart extends Component {
     return (
       <div>
         {cartItems.length === 0 ? (
-          <div className='cart cart-header'>Cart is empty</div>
+          <div className='cart cart-header'>El carrito está vacio</div>
         ) : (
           <div className='cart cart-header'>
-            You have {cartItems.length} in the cart{' '}
+            Tienes {cartItems.length} producto en el carrito{' '}
           </div>
         )}
         <div>
@@ -53,7 +53,7 @@ export default class Cart extends Component {
                           className='button'
                           onClick={() => this.props.removeFromCart(item)}
                         >
-                          Remove
+                          Eliminar
                         </button>
                       </div>
                     </div>
@@ -78,7 +78,7 @@ export default class Cart extends Component {
                     }}
                     className='button primary'
                   >
-                    Proceed
+                    Realizar Compra
                   </button>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          <label>Name</label>
+                          <label>Nombre</label>
                           <input
                             name='name'
                             type='text'
@@ -106,7 +106,7 @@ export default class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          <label>Address</label>
+                          <label>Dirección</label>
                           <input
                             name='address'
                             type='text'
@@ -115,8 +115,8 @@ export default class Cart extends Component {
                           ></input>
                         </li>
                         <li>
-                          <button className='button primary' type='submit'>
-                            Checkout
+                          <button className='button btn1 primary' type='submit'>
+                            Pagar
                           </button>
                         </li>
                       </ul>

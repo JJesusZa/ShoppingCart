@@ -29,7 +29,7 @@
         "image": "/images/dress4.jpg",
         "title": "Vestido completo diseño lunar",
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
-        "availableSizes": ["XL"],
+        "availableSizes": ["XL","S"],
         "price": 299
       },
       {

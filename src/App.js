@@ -57,7 +57,7 @@ class App extends React.Component {
     const sort = event.target.value;
     console.log(event.target.value);
     this.setState((state) => ({
-      sort: sort,
+      sort,
       products: this.state.products
         .slice()
         .sort((a, b) =>

@@ -9,16 +9,18 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
-      cartItems: [],
+      cartItems: localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        : [],
       size: '',
       sort: '',
     };
   }
+  createOrder = (order) => {
+    alert('Need to save order for ' + order.name);
+  };
   removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();
-    /* this.setState({
-      cartItems: cartItems.filter((x) => x._id !== product._id),
-    }); */
     let alreadyInCart = false;
     cartItems.forEach((item) => {
       if (item._id === product._id) {
@@ -37,6 +39,12 @@ class App extends React.Component {
         });
       }
     });
+    localStorage.setItem(
+      'cartItems',
+      JSON.stringify(
+        cartItems.filter((x) => x._id && x.count !== product._id && x.count)
+      )
+    );
   };
   addToCart = (product) => {
     const cartItems = this.state.cartItems.slice();
@@ -51,13 +59,14 @@ class App extends React.Component {
       cartItems.push({ ...product, count: 1 });
     }
     this.setState({ cartItems });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
   };
   sortProducts = (event) => {
     // impl
     const sort = event.target.value;
     console.log(event.target.value);
     this.setState((state) => ({
-      sort,
+      sort: sort,
       products: this.state.products
         .slice()
         .sort((a, b) =>
@@ -114,6 +123,7 @@ class App extends React.Component {
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
+                createOrder={this.createOrder}
               />
             </div>
           </div>

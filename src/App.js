@@ -2,17 +2,58 @@ import React from 'react';
 import data from './data.json';
 import Products from './components/Products';
 import Filter from './components/Filter';
+import Cart from './components/Cart';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       products: data.products,
+      cartItems: [],
       size: '',
       sort: '',
     };
   }
+  removeFromCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    /* this.setState({
+      cartItems: cartItems.filter((x) => x._id !== product._id),
+    }); */
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count--;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({ cartItems });
+    cartItems.forEach((item) => {
+      if (item.count < 1) {
+        this.setState({
+          cartItems: cartItems.filter((x) => x._id !== product._id),
+        });
+      }
+    });
+  };
+  addToCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({ cartItems });
+  };
   sortProducts = (event) => {
+    // impl
     const sort = event.target.value;
     console.log(event.target.value);
     this.setState((state) => ({
@@ -35,6 +76,7 @@ class App extends React.Component {
     }));
   };
   filterProducts = (event) => {
+    // impl
     console.log(event.target.value);
     if (event.target.value === '') {
       this.setState({ size: event.target.value, products: data.products });
@@ -51,7 +93,7 @@ class App extends React.Component {
     return (
       <div className='grid-container'>
         <header>
-          <a href='/'>Moda ZamsClu</a>
+          <a href='/'>React Shopping Cart</a>
         </header>
         <main>
           <div className='content'>
@@ -63,12 +105,20 @@ class App extends React.Component {
                 filterProducts={this.filterProducts}
                 sortProducts={this.sortProducts}
               ></Filter>
-              <Products products={this.state.products}></Products>
+              <Products
+                products={this.state.products}
+                addToCart={this.addToCart}
+              ></Products>
             </div>
-            <div className='sidebar'>Productos en carrito</div>
+            <div className='sidebar'>
+              <Cart
+                cartItems={this.state.cartItems}
+                removeFromCart={this.removeFromCart}
+              />
+            </div>
           </div>
         </main>
-        <footer>Todos los derechos reservados.</footer>
+        <footer>All right is reserved.</footer>
       </div>
     );
   }

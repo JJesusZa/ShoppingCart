@@ -3,6 +3,7 @@ import data from './data.json';
 import Products from './components/Products';
 import Filter from './components/Filter';
 import Cart from './components/Cart';
+import Swal from 'sweetalert2';
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,17 @@ class App extends React.Component {
     };
   }
   createOrder = (order) => {
-    alert('Orden creada para ' + order.name);
+    const cartItems = this.state.cartItems.slice();
+    this.setState({ cartItems });
+    cartItems.length = 0;
+
+    Swal.fire({
+      title: 'Gracias por Comprar a ZamsClu moda',
+      text: 'Orden creada para ' + order.name,
+      icon: 'success',
+      confirmButtonColor: '352f50',
+      confirmButtonText: 'Seguir Comprando',
+    });
   };
   removeFromCart = (product) => {
     const cartItems = this.state.cartItems.slice();

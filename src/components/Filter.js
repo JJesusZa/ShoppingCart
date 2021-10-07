@@ -22,6 +22,7 @@ export default class Filter extends Component {
             >
               <option value=''>Todo</option>
               <option value='XS'>XS</option>
+              <option value='XS'>X</option>
               <option value='S'>S</option>
               <option value='M'>M</option>
               <option value='L'>L</option>

@@ -127,6 +127,11 @@ export default class Cart extends Component {
             </div>
           )}
         </div>
+        {cartItems.length !== 0 && (
+          <a href='#form' className='gotocart'>
+            Carrito
+          </a>
+        )}
       </div>
     );
   }

@@ -47,6 +47,22 @@
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
         "availableSizes": ["XL", "XXL"],
         "price": 499.9
+      },
+      {
+        "_id": "dress7",
+        "image": "/images/dress7.jfif",
+        "title": "Vestido café estilo contemporaneo y liso",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["XS","X", "L", "XL", "XXL"],
+        "price": 150
+      },
+      {
+        "_id": "dress8",
+        "image": "/images/dress8.jpg",
+        "title": "Vestido corto con terminado opaco y de maxima calidad",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["L", "M", "XXL"],
+        "price": 350
       }
     ]
   }

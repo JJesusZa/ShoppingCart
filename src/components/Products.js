@@ -19,9 +19,22 @@ export default class Products extends Component {
   };
   render() {
     const { product } = this.state;
+
+    const customStyles = {
+      content: {
+        width: '80%',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+      },
+    };
+
     return (
       <div>
-        <Fade bottom cascade>
+        <Fade cascade>
           <ul className='products'>
             {this.props.products.map((product) => (
               <li key={product._id}>
@@ -48,9 +61,16 @@ export default class Products extends Component {
           </ul>
         </Fade>
         {product && (
-          <Modal isOpen={true} onRequestClose={this.closeModal}>
+          <Modal
+            isOpen={true}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+          >
             <Zoom>
-              <button className='close-modal' onClick={this.closeModal}>
+              <button
+                className='button primary close-modal'
+                onClick={this.closeModal}
+              >
                 x
               </button>
               <div className='product-details'>
@@ -78,7 +98,7 @@ export default class Products extends Component {
                         this.closeModal();
                       }}
                     >
-                      Add To Cart
+                      Agregar al carrito
                     </button>
                   </div>
                 </div>

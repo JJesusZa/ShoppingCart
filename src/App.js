@@ -62,7 +62,6 @@ class App extends React.Component {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   };
   sortProducts = (event) => {
-    // impl
     const sort = event.target.value;
     console.log(event.target.value);
     this.setState((state) => ({
@@ -85,7 +84,6 @@ class App extends React.Component {
     }));
   };
   filterProducts = (event) => {
-    // impl
     console.log(event.target.value);
     if (event.target.value === '') {
       this.setState({ size: event.target.value, products: data.products });
@@ -102,7 +100,7 @@ class App extends React.Component {
     return (
       <div className='grid-container'>
         <header>
-          <a href='/'>React Shopping Cart</a>
+          <a href='/'>Moda Femenina ZamsClu</a>
         </header>
         <main>
           <div className='content'>
@@ -119,7 +117,7 @@ class App extends React.Component {
                 addToCart={this.addToCart}
               ></Products>
             </div>
-            <div className='sidebar'>
+            <div className='sidebar' id='form'>
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
@@ -128,7 +126,7 @@ class App extends React.Component {
             </div>
           </div>
         </main>
-        <footer>All right is reserved.</footer>
+        <footer>Todos los derechos reservados</footer>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
-  font-size: 70%;
+  font-size: 60%;
   box-sizing: border-box;
 }
 
@@ -124,6 +124,10 @@ footer {
   border-radius: 10px;
 }
 
+img {
+  width: 100%;
+}
+
 .product p {
   height: 2rem;
 }
@@ -132,6 +136,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .product-price div,
@@ -149,6 +154,7 @@ footer {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f0f0f0;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .button:hover {
@@ -156,7 +162,8 @@ footer {
 }
 
 .button.primary {
-  background-color: chartreuse;
+  background-color: #f6adeb;
+  color: #352f50;
 }
 /*filter*/
 .filter {
@@ -167,9 +174,6 @@ footer {
   border-bottom: 0.1rem #c0c0c0 solid;
 }
 
-.filter div {
-  flex: 1;
-}
 /* Index.css */
 .cart {
   padding: 1rem;
@@ -246,11 +250,15 @@ input {
 }
 .product-details-description {
   flex: 1 1;
-  margin: 1rem;
+  padding: 1rem;
 }
 .close-modal {
   position: absolute;
   right: 1rem;
   top: 2.5rem;
   z-index: 1000;
+}
+
+button.react-reveal.close-modal {
+  position: fixed;
 }

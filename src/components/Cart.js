@@ -47,15 +47,15 @@ export default class Cart extends Component {
                     </div>
                     <div>
                       <div>{item.title}</div>
-                      <div className='right'>
-                        {formatCurrency(item.price)} x {item.count}{' '}
-                        <button
-                          className='button'
-                          onClick={() => this.props.removeFromCart(item)}
-                        >
-                          Eliminar
-                        </button>
-                      </div>
+                    </div>
+                    <div className='right'>
+                      {formatCurrency(item.price)} x {item.count}{' '}
+                      <button
+                        className='button'
+                        onClick={() => this.props.removeFromCart(item)}
+                      >
+                        Eliminar
+                      </button>
                     </div>
                   </li>
                 ))}
@@ -78,7 +78,7 @@ export default class Cart extends Component {
                     }}
                     className='button primary'
                   >
-                    Realizar Compra
+                    Comprar
                   </button>
                 </div>
               </div>

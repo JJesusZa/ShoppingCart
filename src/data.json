@@ -29,7 +29,7 @@
         "image": "/images/dress4.jpg",
         "title": "Vestido completo diseño lunar",
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
-        "availableSizes": ["XL","S"],
+        "availableSizes": ["XL","S","XS"],
         "price": 299
       },
       {
@@ -37,7 +37,7 @@
         "image": "/images/dress5.jpg",
         "title": "Mini vestido frill en lunares amarillos",
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
-        "availableSizes": ["X", "L", "XL"],
+        "availableSizes": ["X", "L", "XL","XS"],
         "price": 350
       },
       {
@@ -45,7 +45,7 @@
         "image": "/images/dress6.jpg",
         "title": "Vestido de té Midi en mancha azul y roja",
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
-        "availableSizes": ["XL", "XXL"],
+        "availableSizes": ["XL", "XXL","S","XS"],
         "price": 499.9
       },
       {
@@ -63,6 +63,38 @@
         "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
         "availableSizes": ["L", "M", "XXL"],
         "price": 350
+      },
+      {
+        "_id": "dress9",
+        "image": "/images/dress9.jpg",
+        "title": "Vestido Negro ajustado al cuerpo y tele de excelente calidad",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["M", "XXL"],
+        "price": 600
+      },
+      {
+        "_id": "dress10",
+        "image": "/images/dress10.jfif",
+        "title": "Vestido moderno de tela perforada en color negro",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["L", "M"],
+        "price": 480
+      },
+      {
+        "_id": "dress11",
+        "image": "/images/dress11.jpeg",
+        "title": "Vestido negro aterciopelado (arriba de las rodillas)",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["L", "M","S"],
+        "price": 750
+      },
+      {
+        "_id": "dress12",
+        "image": "/images/dress12.jfif",
+        "title": "Vestido vaquero corto con mangas voluminosas",
+        "description": "Esto es para todas las últimas tendencias, sin importar quién seas, de dónde eres y qué estás haciendo. Exclusiva de ASOS, nuestra marca universal está aquí para usted, y viene en todas nuestras gamas de ajuste: ASOS Curve, Tall, Petite y Maternity. Creado por nosotros, diseñado por usted.",
+        "availableSizes": ["L", "M","S"],
+        "price": 313
       }
     ]
   }

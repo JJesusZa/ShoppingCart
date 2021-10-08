@@ -62,28 +62,28 @@ export default class Cart extends Component {
               </ul>
             </Fade>
           </div>
-          {cartItems.length !== 0 && (
-            <div>
-              <div className='cart'>
-                <div className='total'>
-                  <div>
-                    Total:{' '}
-                    {formatCurrency(
-                      cartItems.reduce((a, c) => a + c.price * c.count, 0)
-                    )}
+          <Fade right cascade>
+            {cartItems.length !== 0 && (
+              <div>
+                <div className='cart'>
+                  <div className='total'>
+                    <div>
+                      Total:{' '}
+                      {formatCurrency(
+                        cartItems.reduce((a, c) => a + c.price * c.count, 0)
+                      )}
+                    </div>
+                    <button
+                      onClick={() => {
+                        this.setState({ showCheckout: true });
+                      }}
+                      className='button primary'
+                    >
+                      Comprar
+                    </button>
                   </div>
-                  <button
-                    onClick={() => {
-                      this.setState({ showCheckout: true });
-                    }}
-                    className='button primary'
-                  >
-                    Comprar
-                  </button>
                 </div>
-              </div>
-              {this.state.showCheckout && (
-                <Fade right cascade>
+                {this.state.showCheckout && (
                   <div className='cart'>
                     <form onSubmit={this.createOrder}>
                       <ul className='form-container'>
@@ -122,11 +122,12 @@ export default class Cart extends Component {
                       </ul>
                     </form>
                   </div>
-                </Fade>
-              )}
-            </div>
-          )}
+                )}
+              </div>
+            )}
+          </Fade>
         </div>
+
         {cartItems.length !== 0 && (
           <a href='#form' className='gotocart'>
             Carrito

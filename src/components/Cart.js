@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import formatCurrency from '../util';
 import Fade from 'react-reveal/Fade';
+import Swal from 'sweetalert2';
 
 export default class Cart extends Component {
   constructor(props) {
@@ -76,6 +77,13 @@ export default class Cart extends Component {
                     <button
                       onClick={() => {
                         this.setState({ showCheckout: true });
+                        Swal.fire({
+                          title: 'Gracias',
+                          text: 'Gracias por elegir moda ZamsClu, por favor danos tus datos para enviar tus productos',
+                          icon: 'warnig',
+                          confirmButtonColor: '352f50',
+                          confirmButtonText: 'Llenar datos',
+                        });
                       }}
                       className='button primary'
                     >

@@ -77,13 +77,6 @@ export default class Cart extends Component {
                     <button
                       onClick={() => {
                         this.setState({ showCheckout: true });
-                        Swal.fire({
-                          title: '¿A donde te lo mandamos?',
-                          text: 'Gracias por elegir moda ZamsClu, por favor danos tus datos para enviar tus productos',
-                          icon: 'warnig',
-                          confirmButtonColor: '352f50',
-                          confirmButtonText: 'Llenar datos',
-                        });
                       }}
                       className='button primary'
                     >
